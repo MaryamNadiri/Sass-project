@@ -96,6 +96,37 @@ body {
       border-radius: 10px;
       overflow: hidden; }
 
+.cards {
+  width: calc(100% - 6rem);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  gap: 30px;
+  padding: 20px 0; }
+
+.card {
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden; }
+  .card img {
+    width: 100%; }
+  .card .card-content {
+    line-height: 1rem;
+    padding: 15px;
+    background: #fff; }
+  .card p {
+    margin: 10px,0;
+    font-size: 1.1rem;
+    font-weight: 100;
+    color: #1b1b1b; }
+  .card span {
+    display: inline-block;
+    margin: 10px 0;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #34ba39; }
+
 @media (max-width: 768px) {
   .hamburger-menu {
     display: flex; }
@@ -112,6 +143,14 @@ body {
       margin-bottom: 20px; }
     .main aside {
       width: calc(100% - 2rem);
-      height: 600px; } }
+      height: 600px; }
+
+  .cards {
+    grid-template-columns: 1fr;
+    margin: 0 auto; } }
+@media (max-width: 768px) and (max-width: 1200px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+    gap: 50px; } }
 
 /*# sourceMappingURL=style.css.map */

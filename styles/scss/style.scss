@@ -88,12 +88,42 @@ body {
         @include boxstyle;
         img {
             @include boxstyle;
-
         }
     }
-
-
 }
+
+.cards {
+  width: calc(100% - 6rem);
+  margin: 0 auto; 
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  gap: 30px;
+  padding: 20px 0;
+}
+
+.card{
+    @include boxstyle;
+
+    img{
+        width: 100%;
+    }
+    .card-content{
+        line-height:1rem;
+        padding: 15px;
+        background: $secondaryColor;
+    }
+    p{
+        margin:10px,0;
+        @include textstyle(1.1rem, 100, $textcolor);
+    }
+    span{
+        display: inline-block;
+        margin: 10px 0;
+        @include textstyle(0.9rem,bold, $primaryColor);
+    }
+}
+
 @include media(M){
     .hamburger-menu{
         display: flex;
@@ -116,6 +146,17 @@ body {
             width: calc(100% - 2rem);
             height: 600px;
         }
+    }
 
+    .cards{
+        grid-template-columns: 1fr;
+        margin: 0 auto;
+    }
+}
+
+@include media (L){
+    .cards{
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
     }
 }

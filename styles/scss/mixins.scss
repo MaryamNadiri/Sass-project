@@ -18,8 +18,8 @@
             @content;
         }
     }
-
 }
+
 @mixin bodystyle {
     background:$secondaryColor;
     height: 600px;
